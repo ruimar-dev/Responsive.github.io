@@ -1,0 +1,14 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+    padding-left: 16px;
+    padding-right: 14px;
+    
+    &__link{
+        @include button($color_darkblue);
+        vertical-align: middle;
+    }
+    @include breakpoint(desktop);
+}

@@ -1,0 +1,11 @@
+.footer{
+    background-color: $color_darkblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    &__link{
+        @include button($gradient_dark)
+    }
+    @include breakpoint(desktop);
+}

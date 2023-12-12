@@ -1,0 +1,94 @@
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) {
+      .main__courses{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+      }
+      .main__title{
+        max-width: 500px;
+        font-size: 60px;
+        line-height: normal;
+      }
+      .main__stats{
+        background:url(../../img/01.\ Business\ Agency.png) no-repeat, url(../../img/Rectangle.png) no-repeat top -80px right 40% ;
+        background-size: contain,65%;
+      }
+      .main__content{
+        display: flex;
+        gap:33px;
+        justify-content: space-between;
+      }
+      .main__intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .main__cta{
+        max-width: max-content;
+      }
+      .main__move{
+        right: 50px;
+      }
+      .main__stat{
+        bottom: -16px;
+        left: -46px;
+      }
+      .main__description{
+        max-width: 400px;
+      }
+    }
+  }
+
+  @if $bp == tablethorizontal {
+    @media (min-width: $bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      .main__title{
+        font-size: 50px;
+        max-width: 500px;
+      }
+      .main{
+        padding-left: 100px;
+      }
+      .main__courses{
+      grid-template-columns: 1fr 1fr 1fr;
+      }
+      .header__link{
+        &:hover{
+          background: var(--666CA3, #666CA3);
+        }
+      }
+      .header{
+        padding-left: 100px;
+      }
+      .main__cta{
+        &:hover{
+          background: var(--Gradient-1-Hover, linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%));
+        }
+        
+
+      }
+      .footer__link{
+        &:hover{
+          background: var(--Gradient-2-Hover, linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%));
+        }
+        
+      }
+      .main__description{
+        max-width: 600px;
+      }
+    }
+  }
+
+  @if $bp == desktopxl {
+    @media (min-width: $bp-desktop-xl) {
+      @content;
+    }
+  }
+}

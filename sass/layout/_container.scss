@@ -1,0 +1,6 @@
+.container {
+    padding-top: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background:$gradient_white;
+    @include breakpoint(desktop);
+}
