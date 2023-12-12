@@ -1,12 +1,50 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-.container {
-  padding-top: 14px;
-  font-family: "Plus Jakarta Sans", sans-serif;
+.footer {
+  background-color: #13183F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+.footer__link {
+  background: linear-gradient(180deg, #4851FF 0%, #F02AA6 100%);
+  color: white;
+  text-decoration: none;
+  padding: 11px 16px 9px 16px;
+  border-radius: 19px;
+  font-size: 14px;
+}
+@media (min-width: 1200px) {
+  .footer .main__title {
+    font-size: 50px;
+    max-width: 500px;
+  }
+  .footer .main {
+    padding-left: 100px;
+  }
+  .footer .main__courses {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .footer .header__link:hover {
+    background: var(--666CA3, #666CA3);
+  }
+  .footer .header {
+    padding-left: 100px;
+  }
+  .footer .main__cta:hover {
+    background: var(--Gradient-1-Hover, linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%));
+  }
+  .footer .footer__link:hover {
+    background: var(--Gradient-2-Hover, linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%));
+  }
+  .footer .main__description {
+    max-width: 600px;
+  }
 }
 
 .header {
@@ -16,7 +54,6 @@
   margin-bottom: 26px;
   padding-left: 16px;
   padding-right: 14px;
-  background: linear-gradient(180deg, white 0%, #F0F1FF 100%);
 }
 .header__link {
   background: #13183F;
@@ -26,6 +63,66 @@
   border-radius: 19px;
   font-size: 14px;
   vertical-align: middle;
+}
+@media (min-width: 1200px) {
+  .header .main__title {
+    font-size: 50px;
+    max-width: 500px;
+  }
+  .header .main {
+    padding-left: 100px;
+  }
+  .header .main__courses {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .header .header__link:hover {
+    background: var(--666CA3, #666CA3);
+  }
+  .header .header {
+    padding-left: 100px;
+  }
+  .header .main__cta:hover {
+    background: var(--Gradient-1-Hover, linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%));
+  }
+  .header .footer__link:hover {
+    background: var(--Gradient-2-Hover, linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%));
+  }
+  .header .main__description {
+    max-width: 600px;
+  }
+}
+
+.container {
+  padding-top: 14px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: linear-gradient(180deg, white 0%, #F0F1FF 100%);
+}
+@media (min-width: 1200px) {
+  .container .main__title {
+    font-size: 50px;
+    max-width: 500px;
+  }
+  .container .main {
+    padding-left: 100px;
+  }
+  .container .main__courses {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .container .header__link:hover {
+    background: var(--666CA3, #666CA3);
+  }
+  .container .header {
+    padding-left: 100px;
+  }
+  .container .main__cta:hover {
+    background: var(--Gradient-1-Hover, linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%));
+  }
+  .container .footer__link:hover {
+    background: var(--Gradient-2-Hover, linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%));
+  }
+  .container .main__description {
+    max-width: 600px;
+  }
 }
 
 .main {
@@ -113,7 +210,7 @@
 .main__courses {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  gap: 50px;
 }
 .main__courses .main__course {
   display: flex;
@@ -121,11 +218,9 @@
   gap: 10px;
   align-items: start;
   margin-bottom: 20px;
-}
-.main__courses .main__course-image {
-  background: linear-gradient(180deg, #FF6F48 0.04%, #F02AA6 100%);
-  padding: 7px;
-  border-radius: 50%;
+  background-color: white;
+  padding: 32px;
+  border-radius: 15px;
 }
 .main__courses .main__course-title {
   color: #13183F;
@@ -139,19 +234,78 @@
   text-decoration: none;
   color: #F74780;
 }
-
-.footer {
-  background-color: #13183F;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px;
+@media (min-width: 768px) {
+  .main .main__courses {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .main .main__title {
+    max-width: 500px;
+    font-size: 60px;
+    line-height: normal;
+  }
+  .main .main__stats {
+    background: url(../../img/01.\ Business\ Agency.png) no-repeat, url(../../img/Rectangle.png) no-repeat top -80px right 40%;
+    background-size: contain, 65%;
+  }
+  .main .main__content {
+    display: flex;
+    gap: 33px;
+    justify-content: space-between;
+  }
+  .main .main__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main .main__cta {
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+  .main .main__move {
+    right: 50px;
+  }
+  .main .main__stat {
+    bottom: -16px;
+    left: -46px;
+  }
+  .main .main__description {
+    max-width: 400px;
+  }
 }
-.footer__link {
-  background: linear-gradient(180deg, #4851FF 0%, #F02AA6 100%);
-  color: white;
-  text-decoration: none;
-  padding: 11px 16px 9px 16px;
-  border-radius: 19px;
-  font-size: 14px;
+@media (min-width: 1200px) {
+  .main .main__title {
+    font-size: 50px;
+    max-width: 500px;
+  }
+  .main .main {
+    padding-left: 100px;
+  }
+  .main .main__courses {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .main .header__link:hover {
+    background: var(--666CA3, #666CA3);
+  }
+  .main .header {
+    padding-left: 100px;
+  }
+  .main .main__cta:hover {
+    background: var(--Gradient-1-Hover, linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%));
+  }
+  .main .footer__link:hover {
+    background: var(--Gradient-2-Hover, linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%));
+  }
+  .main .main__description {
+    max-width: 600px;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
 }/*# sourceMappingURL=style.css.map */
