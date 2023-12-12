@@ -45,6 +45,9 @@
   .footer .main__description {
     max-width: 600px;
   }
+  .footer .footer {
+    padding-left: 80px;
+  }
 }
 
 .header {
@@ -90,6 +93,9 @@
   .header .main__description {
     max-width: 600px;
   }
+  .header .footer {
+    padding-left: 80px;
+  }
 }
 
 .container {
@@ -122,6 +128,9 @@
   }
   .container .main__description {
     max-width: 600px;
+  }
+  .container .footer {
+    padding-left: 80px;
   }
 }
 
@@ -298,6 +307,9 @@
   }
   .main .main__description {
     max-width: 600px;
+  }
+  .main .footer {
+    padding-left: 80px;
   }
 }
 
